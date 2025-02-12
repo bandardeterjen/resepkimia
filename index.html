@@ -46,20 +46,39 @@
         .gallery-container {
             margin-top: 20px;
         }
-		 .product-photo img {
+	
+	// light display
+	.product-photo img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             margin-top: 20px;
         }
+	    
+       // dark display
+	.product-photo2 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+	    background-color: #d2d2d2;
+	    
+        }    
 
-
+        // light display
         .cta-button {
             display: flex;
             justify-content: center;
             margin-bottom: 50px;
+        }
+
+	// dark display
+	.cta-button2 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
 	    background-color: #d2d2d2;
-	    padding: 15px 30px;
+	   
         }
 
         .cta-button a {
@@ -75,9 +94,18 @@
         .cta-button a:hover {
             background-color: #218838;
         }
-		.description-product {
+
+	// light display
+	.description-product {
             text-align: left;
             margin: 30px 0;
+        }
+
+	// dark display
+	.description-product2 {
+            text-align: left;
+            margin: 30px 0;
+	    background-color: #d2d2d2;
         }
     </style>
 </head>
@@ -166,7 +194,7 @@
     </section>
 	
 	 <!-- Product Photo Section  1 -->
-    <section class="product-photo text-center">
+    <section class="product-photo2 text-center">
         <div class="container">
             <h2 id="sabun">Resep Lengkap Sabun</h2>
         <img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-sabun.png" alt="Resep Sabun" class="img-fluid">             
@@ -174,7 +202,7 @@
     </section>
 
     <!-- Description Section 1 -->
-    <section class="description-product">
+    <section class="description-product2">
         <div class="container">
             <p>Tingkatkan keahlian Anda dalam membuat sabun dengan kumpulan resep sabun teruji yang kami tawarkan. Pelajari cara membuat berbagai jenis sabun, dari sabun laundry ekonomis hingga sabun pembersih kamar mandi premium, dengan hanya Rp 99.000.<br/>
 
@@ -230,7 +258,7 @@ Pesan sekarang dan ciptakan sabun terbaik Anda sendiri.
     </section>
 
     <!-- Call to Action Section 1 -->
-    <section class="cta-button text-center">
+    <section class="cta-button2 text-center">
         <div class="container">
 		<h2>Beli Sekarang Di:</h2>
             <a href="#" class="btn">Ratakan</a>
