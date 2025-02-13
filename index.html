@@ -7,6 +7,9 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css' integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' rel='stylesheet'/>
+
     <style>
         /* Custom CSS */
         body {
@@ -87,6 +90,26 @@
             text-align: left;
             margin: 30px 0;
         }
+		#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99999;
+    border: none;
+    outline: none;
+    background-color: #229af7;
+    color: white;
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 50%;
+    font-size: 17px;
+    transition:all 1s ease 50ms;
+}
+#myBtn:hover {background-color: #555;}
+@media (max-width: 480px){
+#myBtn {bottom:80px;}
+}
     </style>
 </head>
 <body>
@@ -107,7 +130,7 @@
                 <div class="col-md-4">
                     <div class="product-gallery text-center">
                         <a href="#sabun"><img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-sabun.png" alt="Resep Sabun"></a>
-                        <h4>Resep Sabun</h4>
+                        <a href="#sabun"><h4>Resep Sabun</h4></a>
                         <p>Pelajari cara membuat sabun alami dengan bahan-bahan yang aman dan ramah lingkungan. Mulai dari sabun batang hingga sabun cair, semua tertera lengkap di sini..</p>
                     </div>
                 </div>
@@ -116,7 +139,7 @@
                 <div class="col-md-4">
                     <div class="product-gallery text-center">
                         <a href="#laundrysepatu"><img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-laundry-sepatu.png" alt="Resep Kimia Laundry Sepatu"></a>
-                        <h4>Resep Laundry Sepatu</h4>
+                        <a href="#laundrysepatu"><h4>Resep Laundry Sepatu</h4></a>
                         <p>Dapatkan resep khusus untuk membersihkan sepatu Anda agar selalu tampak baru. Cocok untuk berbagai jenis bahan sepatu, mulai dari kulit hingga kain.</p>
                     </div>
                 </div>
@@ -126,7 +149,7 @@
                 <div class="col-md-4">
                     <div class="product-gallery text-center">
                         <a href="#laundry"><img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-laundry.png" alt="Resep Kimia Laundry"></a>
-                        <h4>Resep Kimia Laundry</h4>
+                        <a href="#laundry"><h4>Resep Kimia Laundry</h4></a>
                         <p>Temukan formulasi terbaik untuk deterjen dan pemutih pakaian yang efektif namun lembut di kulit. Resep ini dirancang untuk memberikan hasil optimal setiap kali mencuci.</p>
                     </div>
                 </div>
@@ -134,7 +157,7 @@
                 <div class="col-md-4">
                     <div class="product-gallery text-center">
                         <a href="#homecare"><img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-homecare.jpg" alt="Resep Homecare"></a>
-                        <h4>Resep Homecare</h4>
+                        <a href="#homecare"><h4>Resep Homecare</h4></a>
                         <p>Panduan membuat produk pembersih rumah tangga, mulai dari pembersih kaca hingga pembersih lantai, semuanya menggunakan bahan-bahan yang mudah ditemukan dan aman digunakan.</p>
                     </div>
                 </div>
@@ -143,7 +166,7 @@
                 <div class="col-md-4">
                     <div class="product-gallery text-center">
                         <a href="#parfum"><img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-parfum.png" alt="Resep Parfum"></a>
-                        <h4>Resep Parfum</h4>
+                        <a href="#parfum"><h4>Resep Parfum</h4></a>
                         <p>Resep eksklusif untuk membuat parfum dengan aroma yang tahan lama dan mewah. Sesuaikan aroma sesuai selera Anda dengan panduan kami yang mudah diikuti.</p>
                     </div>
                 </div>
@@ -152,7 +175,7 @@
                 <div class="col-md-4">
                     <div class="product-gallery text-center">
                         <a href="#otomotif"><img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-otomotif.png" alt="Resep Otomotif"></a>
-                        <h4>Resep Otomotif</h4>
+                        <a href="#otomotif"><h4>Resep Otomotif</h4></a>
                         <p>Formulasi untuk pembersih dan perawatan kendaraan Anda, termasuk pembersih interior, polish, dan lainnya. Jaga kendaraan Anda tetap bersih dan terawat dengan produk buatan sendiri.</p>
                     </div>
                 </div>
@@ -241,15 +264,465 @@ Pesan sekarang dan ciptakan sabun terbaik Anda sendiri.
     <section class="cta-button text-center">
         <div class="container">
 		<h2>Beli Sekarang Di:</h2>
-        <a href="http://www.google.com/url?q=http%3A%2F%2Flynk.id%2Flaundry%2FGYoKaMg%2Fcheckout&sa=D&sntz=1&usg=AOvVaw0ybwc2nE51bblosX8ZQ06-" class="btn">Ratakan</a>
-	    <a href="https://www.google.com/url?q=https%3A%2F%2Fratakan.com%2Fcart%2Fddb1f12ca32949e8dcec42b80056b0f0&sa=D&sntz=1&usg=AOvVaw3ePfUU6dc49l1gaG8O49ve" class="btn">LynkID</a>
+        <a href="http://www.google.com/url?q=http%3A%2F%2Flynk.id%2Flaundry%2FGYoKaMg%2Fcheckout&sa=D&sntz=1&usg=AOvVaw0ybwc2nE51bblosX8ZQ06-" class="btn">LynkID</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fratakan.com%2Fcart%2Fddb1f12ca32949e8dcec42b80056b0f0&sa=D&sntz=1&usg=AOvVaw3ePfUU6dc49l1gaG8O49ve" class="btn">Ratakan</a>
 	    <a href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F6285773009666%3Ftext%3DHalo%2520gan%2520saya%2520minat%2520Resep%2520Lengkap%2520Sabun.%250AHarga%2520Rp%252099.000%252C-%2520%250AFile%2520akan%2520dikirim%2520via%2520Whatsapp%2520atau%2520email%250APembayaran%2520transfer%2520bank%250ARekening%2520Bank%2520Atas%2520nama%2520Wahyudi%250ABank%2520Mandiri%25201200009763405%2520%250AJenius%2520BTPN%2520%252090140134774%250AMohon%2520kirim%2520bukti%2520transfer%2520ke%2520nomor%2520ini%252C%2520terima%2520kasih%250A%250ADari%253A%2520https%253A%252F%252Fsites.google.com%252Fview%252Fresep-lengkap%252Fdaftar-isi%252Fsabun&sa=D&sntz=1&usg=AOvVaw3wsMRWL2AiwLemZHAVdaJ-" class="btn">Whatsapp</a>
         </div>
     </section>
+	
+	 <!-- Product Photo Section  2 -->
+    <section class="product-photo text-center">
+        <div class="container">
+            <h2 id="laundrysepatu">Resep Lengkap Kimia Laundry Sepatu</h2>
+        <img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-laundry-sepatu.png" alt="Resep Lengkap Kimia Laundry Sepatu" class="img-fluid">             
+	   </div>
+    </section>
+
+    <!-- Description Section 2 -->
+    <section class="description-product">
+        <div class="container">
+            <p>Dapatkan Resep Kimia Laundry Sepatu, Helm, dan Tas untuk menjaga penampilan dan memperpanjang usia barang-barang kesayangan Anda! Dengan  resep teruji dan sudah dipraktekkan, Anda dapat:<br/>
+<br/>
+* Semir Sepatu Sintetis<br/>
+
+* Semir Sepatu Cair<br/>
+
+* Premium Shoe Cleaner<br/>
+
+* Pemutih Sol Sepatu<br/>
+
+* Unyellowing Mdsole<br/>
+
+* Leather Cleaner<br/>
+
+* Natural Leather Balm<br/>
+
+* Mink Oil Leather Conditioner<br/>
+
+* Parfum Sepatu Premium<br/>
+
+* Parfum Sepatu Waterbase<br/>
+
+* Parfum Helm Waterbase<br/><br/>
+
+Hanya dengan Rp 99.000, Anda mendapatkan semua resep yang Anda butuhkan untuk:<br/>
+
+* Membersihkan dan merawat sepatu, helm, dan tas Anda<br/>
+
+* Menjaga penampilannya agar tetap seperti baru<br/>
+
+* Menghemat biaya perawatan di toko<br/>
+
+Jangan lewatkan kesempatan ini untuk merawat barang-barang kesayangan Anda dengan lebih hemat dan efektif.<br/><br/>
+
+Mengapa harus beli resep kimia laundry khusus sepatu ini<br/>
+
+* Resep telah diuji dan terbukti efektif.<br/>
+
+* Bahan-bahan yang digunakan mudah didapatkan.<br/>
+
+* Proses pembuatannya mudah dan tidak memakan waktu lama.<br/>
+
+* Anda dapat menggunakan resep ini untuk keperluan pribadi atau bisnis.<br/>
+
+Dapatkan Resep Kimia Laundry Sepatu, Helm, dan Tas sekarang dan rasakan manfaatnya!<br/><br/>
+
+Catatan:<br/>
+
+* Anda dapat bereksperimen dengan bahan-bahan yang berbeda untuk menemukan kombinasi terbaik untuk kebutuhan Anda.<br/>
+
+* Selalu uji resep pada area kecil yang tersembunyi terlebih dahulu sebelum diaplikasikan pada seluruh permukaan.<br/>
+
+* Simpan resep di tempat yang aman dan mudah diakses.<br/>
+</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section 2 -->
+    <section class="cta-button text-center">
+        <div class="container">
+		<h2>Beli Sekarang Di:</h2>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Flynk.id%2Flaundry%2FENqp2OO%2Fcheckout&sa=D&sntz=1&usg=AOvVaw3qkDlefQ3m0LrVH7zyAisn" class="btn">LynkID</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fratakan.com%2Fcart%2F4376e0678a8f7f522d9cb53f3bd485a6&sa=D&sntz=1&usg=AOvVaw1mS8DNUtkLXIaDgndEkLh-" class="btn">Ratakan</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F6285773009666%3Ftext%3DHalo%2520gan%2520saya%2520minat%2520Resep%2520Lengkap%2520Kimia%2520Laundry%2520Sepatu%250AHarga%2520Rp%252099.000%252C-%2520%250AFile%2520akan%2520dikirim%2520via%2520Whatsapp%2520atau%2520email%250APembayaran%2520transfer%2520bank%250ARekening%2520Bank%2520Atas%2520nama%2520Wahyudi%250ABank%2520Mandiri%25201200009763405%2520%250AJenius%2520BTPN%2520%252090140134774%250AMohon%2520kirim%2520bukti%2520transfer%2520ke%2520nomor%2520ini%252C%2520terima%2520kasih%250A%250ADari%253A%2520https%253A%252F%252Fsites.google.com%252Fview%252Fresep-lengkap%252Fdaftar-isi%252Fkimia-laundry-sepatu&sa=D&sntz=1&usg=AOvVaw3PMzoXGKsRgkiRWqN1klR_" class="btn">Whatsapp</a>
+		</div>
+    </section>
+	
+	<!-- Product Photo Section  3 -->
+    <section class="product-photo text-center">
+        <div class="container">
+            <h2 id="laundry">Resep Lengkap Kimia Laundry</h2>
+        <img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-laundry.png" alt="Resep Lengkap Kimia Laundry" class="img-fluid">             
+	   </div>
+    </section>
+
+    <!-- Description Section 3 -->
+    <section class="description-product">
+        <div class="container">
+            <p>Tingkatkan kualitas laundry dan perawatan sepatu Anda dengan Resep Kimia Laundry Lengkap Dapatkan  resep teruji dan sudah dipraktekkan untuk berbagai kebutuhan, seperti:<br/>
+
+<br/>
+Deterjen:<br/>
+
+* Deterjen Laundry Ekonomis<br/>
+
+* Deterjen Laundry Premium<br/>
+
+* Deterjen Laundry Ultra<br/>
+
+* Deterjen Laundry Organik<br/>
+
+* Deterjen MES<br/><br/>
 
 
+Sabun dan Pemutih:<br/>
+
+* Sabun Lerak<br/>
+
+* Pemutih Pakaian<br/>
+
+* Pemutih Sol Sepatu<br/><br/>
+
+
+Parfum:<br/>
+
+* Parfum Laundry Premium<br/>
+
+* Parfum Sepatu Premium<br/>
+
+* Parfum Sepatu Waterbase<br/>
+
+* Parfum Helm Waterbase<br/><br/>
+
+
+Pembersih:<br/>
+
+* Pembersih Sepatu<br/>
+
+* Premium Shoe Cleaner<br/>
+
+* Unyellowing Mdsole<br/>
+
+* Pembersih Stroller Bayi<br/>
+
+* Shampoo Karpet<br/><br/>
+
+
+Lainnya:<br/>
+
+* Parfum Sajadah/Karpet Non Alkohol<br/>
+
+* Bed Cover and Linen Spray<br/><br/>
+
+
+Hanya dengan Rp 99.000,- , Anda mendapatkan semua resep yang Anda butuhkan untuk:<br/>
+
+* Melakukan laundry dengan lebih hemat dan efektif<br/>
+
+* Menjaga kebersihan dan kesegaran sepatu<br/>
+
+* Membersihkan berbagai perlengkapan rumah tangga<br/><br/>
+
+
+Jangan lewatkan kesempatan ini untuk meningkatkan kualitas laundry dan perawatan sepatu Anda.<br/><br/>
+
+
+Mengapa harus beli resep kimia laundry?<br/>
+
+* Resep telah diuji dan terbukti efektif.<br/>
+
+* Bahan-bahan yang digunakan mudah didapatkan.<br/>
+
+* Proses pembuatannya mudah dan tidak memakan waktu lama.<br/>
+
+* Anda dapat menggunakan resep ini untuk keperluan pribadi atau bisnis.<br/><br/>
+
+
+Dapatkan Resep Kimia Laundry Lengkap sekarang dan rasakan manfaatnya.
+</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section 3 -->
+    <section class="cta-button text-center">
+        <div class="container">
+		<h2>Beli Sekarang Di:</h2>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Flynk.id%2Flaundry%2FajOxaPB%2Fcheckout&sa=D&sntz=1&usg=AOvVaw0HVpKWWOA1v3kdnN_4cUmX" class="btn">LynkID</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fratakan.com%2Fcart%2F06ce57169560fa27f9107034b21539bd&sa=D&sntz=1&usg=AOvVaw0t9sjXFZUgyMT_-tzxJGL3" class="btn">Ratakan</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F6285773009666%3Ftext%3DHalo%2520gan%2520saya%2520minat%2520Resep%2520Lengkap%2520Kimia%2520Laundry%250AHarga%2520Rp%252099.000%252C-%2520%250AFile%2520akan%2520dikirim%2520via%2520Whatsapp%2520atau%2520email%250APembayaran%2520transfer%2520bank%250ARekening%2520Bank%2520Atas%2520nama%2520Wahyudi%250ABank%2520Mandiri%25201200009763405%2520%250AJenius%2520BTPN%2520%252090140134774%250AMohon%2520kirim%2520bukti%2520transfer%2520ke%2520nomor%2520ini%252C%2520terima%2520kasih%250A%250ADari%253A%2520https%253A%252F%252Fsites.google.com%252Fview%252Fresep-lengkap%252Fdaftar-isi%252Fkimia-laundry&sa=D&sntz=1&usg=AOvVaw1LlJxBixaysOSwzlc5qBPB" class="btn">Whatsapp</a>
+        </div>
+    </section>
+	
+	<!-- Product Photo Section  4 -->
+    <section class="product-photo text-center">
+        <div class="container">
+            <h2 id="homecare">Resep Lengkap Homecare</h2>
+        <img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-homecare.jpg" alt="Resep Lengkap Homecare" class="img-fluid">             
+	   </div>
+    </section>
+
+    <!-- Description Section 4 -->
+    <section class="description-product">
+        <div class="container">
+            <p>Dapatkan Resep Homecare Lengkap untuk membuat berbagai produk pembersih rumah tangga sendiri! Dengan resep teruji dan sudah dipraktekkan, Anda bisa membuat 
+<br/><br/>
+- pembersih lantai<br/>
+
+- pembersih lantai parkit<br/>
+
+- pembersih lantai kamar mandi <br/>
+
+- pembersih kerak kamar mandi <br/>
+
+- toilet seat sanitizer <br/>
+
+- toilet bowl cleaner <br/>
+
+- karbol sereh <br/>
+
+- karbol pinus<br/>
+
+- sabun cuci piring <br/>
+
+- sabun colek<br/>
+
+- hand soap<br/>
+
+- deterjen laundry<br/>
+
+- hand sanitizer gel<br/>
+
+- leather cleaner <br/>
+
+- bed cover and linen spray<br/>
+
+- parfum pengusir tikus <br/>
+
+- pengkilap mebel <br/>
+
+- lilin aromaterapi <br/>
+
+- dempul kayu<br/><br/>
+
+Mengapa harus beli resep lengkap homecare ini?<br/>
+
+* Resep telah diuji dan terbukti efektif.<br/>
+
+* Bahan-bahan yang digunakan mudah didapatkan.<br/>
+
+* Proses pembuatannya mudah dan tidak memakan waktu lama.<br/>
+
+* Anda dapat menggunakan resep ini untuk keperluan pribadi atau bisnis.<br/><br/>
+
+Dapatkan Resep Homecare Lengkap sekarang dan rasakan manfaatnya
+</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section 4 -->
+    <section class="cta-button text-center">
+        <div class="container">
+		<h2>Beli Sekarang Di:</h2>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Flynk.id%2Flaundry%2Fdp0rkYA%2Fcheckout&sa=D&sntz=1&usg=AOvVaw2eNg_SQcNOIZckM0q00tVY" class="btn">LynkID</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fratakan.com%2Fcart%2Fe37a0931734800abf1d74df9ffa1fd31&sa=D&sntz=1&usg=AOvVaw15Ibq69bY1cOQPzANOYWSw" class="btn">Ratakan</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F6285773009666&sa=D&sntz=1&usg=AOvVaw1eS1ab5se2dFlLgU5lfnJj" class="btn">Whatsapp</a>
+        </div>
+    </section>
+	
+	<!-- Product Photo Section  5 -->
+    <section class="product-photo text-center">
+        <div class="container">
+            <h2 id="parfum">Resep Lengkap Parfum</h2>
+        <img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-parfum.png" alt="Resep Lengkap Parfum" class="img-fluid">             
+	   </div>
+    </section>
+
+    <!-- Description Section 5 -->
+    <section class="description-product">
+        <div class="container">
+            <p>Tingkatkan keahlian Anda dalam membuat parfum dengan kumpulan resep parfum teruji yang kami tawarkan! Pelajari cara membuat berbagai jenis parfum, dari deodoran alami hingga parfum mobil, dengan hanya Rp 99.000
+<br/>
+<br/>
+Resep yang Anda dapatkan
+<br/>
+* Deodoran Natural
+<br/
+* Deodoran Spray
+<br/
+* Parfum Laundry
+<br/
+* Parfum Sepatu/Helm WB
+<br/
+* Parfum Sepatu Premium
+<br/
+* Parfum Sajadah Non Alkohol
+<br/
+* Parfum Bed Cover dan Linen
+<br/
+* Parfum Pengusir Tikus
+<br/
+* Lilin Aromaterapi
+<br/
+* Penghilang Bau di Mobil
+<br/
+* Air Freshener Gel
+<br/
+* Extrait de Perfume
+<br/
+* Eau de Perfume
+<br/
+* Eau de Toilette
+<br/
+* Parfum Roll On EDT
+<br/
+* Parfum Essential Oil
+<br/<br/
+Semua resep telah diuji dan dipraktikkan, sehingga Anda dapat yakin akan hasilnya. Dapatkan panduan lengkap pembuatan parfum juga tips dan trik sukses berbisnis parfum dan akses mendapatkan suplayer bibit parfum termurah.
+<br/<br/
+Jangan lewatkan kesempatan ini untuk
+<br/
+* Menghemat uang dengan membuat parfum sendiri
+<br/
+* Mendapatkan parfum berkualitas tinggi yang sesuai dengan kebutuhan Anda
+<br/
+* Mengembangkan keahlian baru yang bermanfaat
+<br/
+* Memberikan aroma favorit Anda pada benda-benda di sekitar Anda
+<br/<br/
+Pesan sekarang dan ciptakan aroma terbaik Anda sendiri.
+</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section 5 -->
+    <section class="cta-button text-center">
+        <div class="container">
+		<h2>Beli Sekarang Di:</h2>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Flynk.id%2Flaundry%2FGp1Rzmk%2Fcheckout&sa=D&sntz=1&usg=AOvVaw1vt8s5Dy8t22dK45pEsl60" class="btn">LynkID</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fratakan.com%2Fcart%2F7cf8909d6096757947fed5b091ec9dac&sa=D&sntz=1&usg=AOvVaw3a9kGHF3w8KVLkJBAp2XtL" class="btn">Ratakan</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F6285773009666%3Ftext%3DHalo%2520gan%2520saya%2520minat%2520Resep%2520Lengkap%2520Parfum%250AHarga%2520Rp%252099.000%252C-%2520%250AFile%2520akan%2520dikirim%2520via%2520Whatsapp%2520atau%2520email%250APembayaran%2520transfer%2520bank%250ARekening%2520Bank%2520Atas%2520nama%2520Wahyudi%250ABank%2520Mandiri%25201200009763405%2520%250AJenius%2520BTPN%2520%252090140134774%250AMohon%2520kirim%2520bukti%2520transfer%2520ke%2520nomor%2520ini%252C%2520terima%2520kasih%250A%250ADari%253A%2520https%253A%252F%252Fsites.google.com%252Fview%252Fresep-lengkap%252Fdaftar-isi%252Fparfum&sa=D&sntz=1&usg=AOvVaw3ZvmsOliUhLpXpmDq7_XIC" class="btn">Whatsapp</a>
+        </div>
+    </section>
+	
+	<!-- Product Photo Section  6 -->
+    <section class="product-photo text-center">
+        <div class="container">
+            <h2 id="otomotif">Resep Lengkap Otomotif</h2>
+        <img src="https://raw.githubusercontent.com/bandardeterjen/resepkimia/refs/heads/images/resep-kimia-otomotif.png" alt="Resep Lengkap Otomotif" class="img-fluid">             
+	   </div>
+    </section>
+
+    <!-- Description Section 6 -->
+    <section class="description-product">
+        <div class="container">
+            <p>Dapatkan Resep Otomotif Lengkap untuk membuat berbagai produk perawatan mobil dan motor Anda sendiri! Dengan resep teruji dan sudah dipraktekkan, Anda dapat:
+<br/><br/>
+Perawatan Eksterior:<br/>
+
+* Pengkilap Dasbor Pasta<br/>
+
+* Pengkilap Dasbor Cair<br/>
+
+* Pengkilap Body Mobil<br/>
+
+* Pengkilap dan Detailing Jamur<br/>
+
+* Pasta Semir Ban<br/>
+
+* Penghilang Bau<br/>
+
+* Air Freshener Gel<br/>
+
+* Parfum Pengusir Tikus<br/>
+
+* Coating Kaca Mobil<br/>
+
+* Pembersih Jamur Kaca Mobil<br/><br/>
+
+Perawatan Interior:<br/>
+
+* Pembersih dan Detailing Interior<br/>
+
+* Pembersih Ban Mobil<br/><br/>
+
+Pembersih Noda:<br/>
+
+* Penghilang Noda Aspal<br/>
+
+* Penghilang Oli/Gemuk<br/>
+
+* Penghilang Oli/Gemuk pada Sepeda<br/>
+
+* Penghilang Cat<br/>
+
+* Penghilang Noda Karat<br/><br/>
+
+Perawatan Jok dan Karpet:<br/>
+
+* Shampoo Karpet Mobil<br/>
+
+* Shampoo Mobil Konsentrat<br/>
+
+* Shampoo Mobil Efek Daun Talas<br/><br/>
+
+Hanya dengan Rp 99.000, Anda mendapatkan semua resep yang Anda butuhkan untuk:<br/>
+
+* Menjaga kebersihan dan kilau mobil dan motor Anda<br/>
+
+* Menghemat biaya perawatan di bengkel<br/>
+
+* Memulai bisnis perawatan otomotif<br/><br/>
+
+Pembayaran aman melalui pihak ketiga . Jangan lewatkan kesempatan ini untuk merawat mobil dan motor Anda dengan lebih hemat dan efektif.
+
+
+<br/><br/>
+
+Mengapa harus beli resep lengkap otomotif ini?<br/>
+
+* Resep telah diuji dan terbukti efektif.<br/>
+
+* Bahan-bahan yang digunakan mudah didapatkan.<br/>
+
+* Proses pembuatannya mudah dan tidak memakan waktu lama.<br/>
+
+* Anda dapat menggunakan resep ini untuk keperluan pribadi atau bisnis.<br/><br/>
+
+Dapatkan Resep Otomotif Lengkap sekarang dan rasakan manfaatnya.
+</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section 6 -->
+    <section class="cta-button text-center">
+        <div class="container">
+		<h2>Beli Sekarang Di:</h2>
+        <a href="https://www.google.com/url?q=https%3A%2F%2Flynk.id%2Flaundry%2FGp1Rzmk%2Fcheckout&sa=D&sntz=1&usg=AOvVaw1vt8s5Dy8t22dK45pEsl60" class="btn">LynkID</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fratakan.com%2Fcart%2F6c63dbdd8e88a8bea1edc3d8fef98915&sa=D&sntz=1&usg=AOvVaw334UsCdRCk7JeEPUczpU71" class="btn">Ratakan</a>
+	    <a href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F6285773009666%3Ftext%3DHalo%2520gan%2520saya%2520minat%2520Resep%2520Lengkap%2520Otomotif%250AHarga%2520Rp%252099.000%252C-%2520%250AFile%2520akan%2520dikirim%2520via%2520Whatsapp%2520atau%2520email%250APembayaran%2520transfer%2520bank%250ARekening%2520Bank%2520Atas%2520nama%2520Wahyudi%250ABank%2520Mandiri%25201200009763405%2520%250AJenius%2520BTPN%2520%252090140134774%250AMohon%2520kirim%2520bukti%2520transfer%2520ke%2520nomor%2520ini%252C%2520terima%2520kasih%250A%250ADari%253A%2520https%253A%252F%252Fsites.google.com%252Fview%252Fresep-lengkap%252Fdaftar-isi%252Fotomotif&sa=D&sntz=1&usg=AOvVaw1srUeQuRjCClxphRmhhSJa" class="btn">Whatsapp</a>
+        </div>
+    </section>
+	
+	<!-- Back To Top -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+ <!-- js -->
+    <script type='text/javascript'>
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	
 </body>
 </html>
